@@ -1,0 +1,46 @@
+{
+  "settings": {
+    "index": {
+      "analysis": {
+        "tokenizer": {
+          "kuromoji": {
+            "type": "kuromoji_tokenizer",
+            "mode": "normal"
+          },
+          "kuromoji_search": {
+            "type": "kuromoji_tokenizer",
+            "mode": "search"
+          },
+          "kuromoji_neologd": {
+            "type": "kuromoji_tokenizer",
+            "mode": "normal",
+            "user_dictionary": "neologd_user_dict.csv"
+          },
+          "kuromoji_neologd_search": {
+            "type": "kuromoji_tokenizer",
+            "mode": "search",
+            "user_dictionary": "neologd_user_dict.csv"
+          }
+        },
+        "analyzer": {
+          "kuromoji_analyzer": {
+            "type": "custom",
+            "tokenizer": "kuromoji"
+          },
+          "kuromoji_search_analyzer": {
+            "type": "custom",
+            "tokenizer": "kuromoji_search"
+          },
+          "kuromoji_neologd_analyzer": {
+            "type": "custom",
+            "tokenizer": "kuromoji_neologd"
+          },
+          "kuromoji_neologd_search_analyzer": {
+            "type": "custom",
+            "tokenizer": "kuromoji_neologd_search"
+          }
+        }
+      }
+    }
+  }
+}
