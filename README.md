@@ -10,6 +10,10 @@ docker-compose build
 
 docker-compose up
 
+## setup index
+
+./setup
+
 ## test
 
 ./test.sh
